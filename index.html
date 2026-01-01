@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Vigilance météo – Martinique</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Vigilance météo – Martinique</h1>
+  <p>Mis à jour : <span id="date"></span></p>
+</header>
+
+<main>
+  <img src="vigilance.png" alt="Carte de vigilance Martinique">
+</main>
+
+<footer>
+  <div class="legend">
+    <span class="vert">Vert</span>
+    <span class="jaune">Jaune</span>
+    <span class="orange">Orange</span>
+    <span class="rouge">Rouge</span>
+  </div>
+</footer>
+
+<script>
+  const d = new Date();
+  document.getElementById("date").innerText =
+    d.toLocaleDateString("fr-FR") + " " + d.toLocaleTimeString("fr-FR", {hour: '2-digit', minute:'2-digit'});
+</script>
+
+</body>
+</html>
